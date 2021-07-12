@@ -5,7 +5,11 @@ class Link < Post
     end
 
     def read_from_console
+        puts "Адрес ссылки:"
+        @url = gets.chomp
 
+        puts "Что за ссылка?"
+        @text = gets.chomp
     end
 
     def to_strings
