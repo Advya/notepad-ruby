@@ -13,6 +13,9 @@ class Task < Post
         @due_date = Date.parse(input)
     end
     def to_strings
-        
+        time_string = "Создано: #{@created_at.strftime("%Y.%m.%d, %H:%M:%S")} \n\r"
+        deadline = "Крайний срок: #{@due_date}"
+
+        return [deadline, @text, time_string]
     end
 end
